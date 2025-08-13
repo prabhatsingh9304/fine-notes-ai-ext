@@ -1,0 +1,15 @@
+{
+  "name": "FineNotes.AI - Youtube Notes",
+  "description": "Take notes from Youtube videos",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "tabs", "downloads", "storage"],
+  "host_permissions": ["https://*.youtube.com/*", "http://localhost:8000/*"]
+}
