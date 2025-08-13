@@ -3,7 +3,7 @@ import takeScreenshot from "./TakeScreenShot";
 import getTranscript from "./GetTranscript";
 import insertEditButton from "./HandleControls";
 import "./Popup.scss";
-
+import SignUp from "./SignUp";
 function Popup() {
   const [copyStatus, setCopyStatus] = useState("");
   const [buttonStatus, setButtonStatus] = useState("");
@@ -61,12 +61,14 @@ function Popup() {
       <h2 className="popup-title">FineNotes.AI - YouTube Notes</h2>
 
       <div className="button-group">
-        <button onClick={takeScreenshot} className="action-button">
+        {/* <button onClick={takeScreenshot} className="action-button">
           📷 Take Screenshot
         </button>
         <button onClick={handleGetAndCopyTranscript} className="action-button">
           📝 Get Transcript
-        </button>
+        </button> */}
+
+        <SignUp />
       </div>
 
       {copyStatus && <div className="status-message">{copyStatus}</div>}
